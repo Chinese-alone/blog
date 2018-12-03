@@ -1,40 +1,12 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1; minimum-scale=1; user-scalable=no;">
-  {% if page.desc %}
-    <meta content="{{ page.desc }}" name="description">
-  {% endif %}
-  {% if page.keywords %}
-    <meta name="keywords" content="{{ page.keywords }}">
-  {% endif %}
-  <meta name="author" content="{{ site.author.name }}">
-  <meta name="baseurl" content="{{ site.baseurl }}">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>
-    {% if page.title != "index" %}
-        {{ site.title }}|{{ page.title }}
-    {% else %}
-        {{ site.title }}
-    {% endif %}
-  </title>
-  <!-- favicon -->
-  <link rel="shortcut icon" href="{{ "/static/assets/img/favicon.ico" | prepend: site.baseurl }}">
+{% seo %}
 
-  <!-- Main CSS -->
-  <link href="{{ "/static/assets/app-20180125.min.css" | prepend: site.baseurl }}" rel="stylesheet">
-  <link href="{{ "/static/css/custom.css" | prepend: site.baseurl }}" rel="stylesheet">
-
-  <!-- Main Scripts -->
-  <script src="{{"/static/assets/app-20180125.min.js"| prepend: site.baseurl }}"></script>
-  <script src="{{"/static/assets/blog-20180125.min.js"| prepend: site.baseurl }}"></script>
-
-  <!-- Google AdSense -->
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-6196184668650108",
-      enable_page_level_ads: true
-    });
-  </script>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">  
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
