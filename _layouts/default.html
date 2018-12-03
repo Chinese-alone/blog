@@ -1,28 +1,31 @@
----
-layout: compress
---- 
-
 <!DOCTYPE html>
 <html>
 
   {% include head.html %}
 
-  <body>
+<body class="home-template">
+  <div id="page" class="site">
+
 
     {% include header.html %}
 
-    <div class="container">
+
+
+    <div class="page-content">
       <div class="wrapper">
         {{ content }}
       </div>
     </div>
 
     {% include footer.html %}
-    
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="{{site.baseurl}}/js/bootstrap.min.js"></script>
- {% if site.analytics %}{% include analytics.html %}{% endif %}
+
+            <div class="overlay"></div>
+  </div><!-- #page -->  
+
+
+    <script id="dsq-count-scr" src="//lucasgatsas.disqus.com/count.js" async></script>
+
   </body>
 
 </html>
